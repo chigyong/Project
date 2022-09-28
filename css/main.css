@@ -8,6 +8,10 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  background-color: black;
+  color: white;
+  position: fixed;
+  width: 100%;
 }
 nav ul li {
   list-style: none;
@@ -15,6 +19,66 @@ nav ul li {
 }
 nav li a {
   text-decoration: none;
-  color: black;
   margin: 5px;
+  color: white;
+}
+
+.box {
+  padding: 50px 10px 0 10px;
+}
+.box article {
+  border: solid red;
+  background-color: black;
+  color: white;
+  margin: 10px;
+  text-align: center;
+  padding: 5px;
+}
+
+@media only screen and (min-width: 1440px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+  }
+  nav ul li {
+    list-style: none;
+    display: inline-block;
+  }
+  nav li a {
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+  }
+  .box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 100px;
+  }
+  .box article {
+    border: solid red;
+    margin: 1rem;
+    top: 1;
+    background-color: black;
+    color: white;
+    text-align: justify;
+    padding: 10px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }/*# sourceMappingURL=main.css.map */
