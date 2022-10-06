@@ -7,78 +7,59 @@
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  background-color: black;
-  color: white;
-  position: fixed;
-  width: 100%;
+  justify-content: space-between;
+  background-color: rgb(56, 55, 55);
 }
-nav ul li {
+nav p {
+  color: white;
+  font-size: 20px;
+  margin: 0.75rem;
+}
+nav .navbar-links ul {
+  display: flex;
   list-style: none;
-  display: inline-block;
 }
-nav li a {
+nav .navbar-links li a {
   text-decoration: none;
-  margin: 5px;
+  padding: 1rem;
   color: white;
+  display: block;
+}
+nav .navbar-menu {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  flex-direction: column;
+  display: none;
+  justify-content: space-between;
+}
+nav .navbar-menu .box {
+  padding: 2px 15px 2px 15px;
+  background-color: white;
+  margin: 3px;
 }
 
-.box {
-  padding: 50px 10px 0 10px;
-}
-.box article {
-  border: solid red;
-  background-color: black;
-  color: white;
-  margin: 10px;
-  text-align: center;
-  padding: 5px;
-}
-
-@media only screen and (min-width: 1440px) {
+@media only screen and (max-width: 425px) {
   nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav .navbar-menu {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: black;
-    color: white;
-    padding: 10px;
-    position: fixed;
+  }
+  nav .navbar-links {
+    display: none;
     width: 100%;
   }
-  nav ul li {
-    list-style: none;
-    display: inline-block;
+  nav .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
   }
-  nav li a {
-    text-decoration: none;
-    color: white;
-    margin: 5px;
+  nav .navbar-links li a {
+    text-align: center;
+    padding: 0.5rem;
   }
-  .box {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding-top: 100px;
-  }
-  .box article {
-    border: solid red;
-    margin: 1rem;
-    top: 1;
-    background-color: black;
-    color: white;
-    text-align: justify;
-    padding: 10px;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .box {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media only screen and (min-width: 768px) {
-  .box {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  nav .navbar-links.active {
+    display: flex;
   }
 }/*# sourceMappingURL=main.css.map */
