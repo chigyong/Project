@@ -16,7 +16,7 @@ body {
 header {
   height: 70vh;
   color: white;
-  padding: 10rem 10rem;
+  padding-top: 10rem;
   text-align: center;
 }
 
@@ -57,12 +57,12 @@ nav .menu-list .bars {
 
 section {
   background-color: black;
-  padding: 5rem 25rem;
+  padding: 5rem;
   color: white;
   text-align: justify;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 500px) {
   nav {
     flex-direction: column;
     align-items: flex-start;
